@@ -1,5 +1,5 @@
 # Image and Video Annotation Tool #
-###@author: ###
+###@author:###
 frozenscrypt
 
 Tool is under maintenance and feature additions with video annotation script coming soon!

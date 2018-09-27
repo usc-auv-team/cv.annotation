@@ -19,7 +19,6 @@ import sys
 import time
 import numpy as np
 import json
-import tensorflow as tf
 import os.path as ops
 from os import path
 import matplotlib.pyplot as plt

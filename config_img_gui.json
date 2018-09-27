@@ -1,1 +1,1 @@
-{"mul": 1, "output_dir": "C:/Users/vivek/USCAUV/usc-computer-vision-2018-master/usc-computer-vision-2018-master/output", "filename": "C:/Users/vivek/USCAUV/usc-computer-vision-2018-master/usc-computer-vision-2018-master/tensorflow/models/research", "image_folder": "r_images", "frame_no": 0}
+{"mul": 1, "output_dir": "path to output file directory", "filename": "path /to /image folders", "image_folder": "image folder name", "frame_no": 0}

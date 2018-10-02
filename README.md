@@ -10,7 +10,9 @@ Tool is under maintenance and feature additions with video annotation script com
 * sudo apt-get isntall opencv-python
 * pip install Pillow
 
-### For windows users, exe file will be updated shortly! ###
+### For windows users ###
+Use Annotator.exe in branch windows-tool. Keep the config-file for the tool in C:/users/Annotator/
+
 
 ## Instructions: ##
 

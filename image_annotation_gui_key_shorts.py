@@ -20,7 +20,8 @@ import ast
 
 
 config_path = "C:/users/Annotator/config_img_gui.json"
-
+test = ''
+i = 0
 
 def init_args():
 	global config_path
@@ -203,13 +204,19 @@ class Application:
 
 	
 	def boundingbox(self,image,frame_no,points):
+		global test,i
+		if test == self.frame_no:
+			i+=1
+		else:
+			i = 0
+			test = self.frame_no
 		smallest_x = int(np.min([pt[0] for pt in points])/self.mul[0])
 		smallest_y = int(np.min([pt[1] for pt in points])/self.mul[1])
 		largest_x = int(np.max([pt[0] for pt in points])/self.mul[0])
 		largest_y = int(np.max([pt[1] for pt in points])/self.mul[1])
 		box_img = cv2.rectangle(image,(smallest_x,smallest_y),(largest_x,largest_y),(0,255,0))
-		cv2.imwrite(self.output_dir + '/detections/' + '{}.jpg'.format(self.frame_no),box_img)
-		cv2.imwrite(self.output_dir + '/boxes/' + '{}.jpg'.format(self.frame_no),
+		cv2.imwrite(self.output_dir + '/detections/' + '{}-{}.jpg'.format(self.frame_no,str(i)),box_img)
+		cv2.imwrite(self.output_dir + '/boxes/' + '{}-{}.jpg'.format(self.frame_no,str(i)),
 			self.frame[smallest_y:largest_y,smallest_x:largest_x])
 
 		# Show cropped image on gui
